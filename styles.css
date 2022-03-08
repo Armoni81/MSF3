@@ -76,7 +76,7 @@ body{
     vertical-align: middle;
     width: 100%;
     border-radius: 20px;
-    background-color: white;
+    background-color: rgb(197, 14, 14);
   box-shadow: 0 4px 8px 0 rgba(246, 6, 6, 0.3), 0 6px 20px 0 rgba(230, 215, 12, 0.5);
   margin-bottom: 25px;
    
@@ -85,7 +85,7 @@ body{
 
     opacity: 95%;
     height:400px;
-    width:100%;
+    width:400px;
     border-radius: 20px;
   }
   .column {
@@ -108,7 +108,8 @@ body{
     border-radius: 20px;
   }
   .row{
-      padding: 100px;
+      padding: 30px;
+      padding-top: 250px;
 
   }
 
@@ -122,3 +123,29 @@ body{
       grid-template-columns: 1fr 1fr;
       padding:40px;
   }
+  /*Fav SALADS */
+  .favs{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   padding-left: 35px;
+   padding-top: 60px;
+
+  }
+  .card{
+    border-radius: 20px;
+  }
+
+  grow {
+    transition: 2.3s ease;
+    }
+  #grow{
+    opacity: 0.5;
+  }
+    
+    #grow:hover{
+    -webkit-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
+    transition: 1s ease;
+    opacity: 100;
+    }
