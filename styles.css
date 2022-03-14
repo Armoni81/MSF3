@@ -60,7 +60,7 @@ body{
     background: #125688;
     color: white;
   }
-.SavorySalads{
+#SavorySalads{
     text-align: center;
     padding: 1px;
     margin-top: 60px;
@@ -91,7 +91,7 @@ body{
   .column {
     flex: 25%;
     max-width: 25%;
-    padding: 0 4px;
+    padding: 4px;
     
   }
  
@@ -149,3 +149,293 @@ body{
     transition: 1s ease;
     opacity: 100;
     }
+
+/*STICKY SIDE BAR*/
+.sticky-social-bar {
+  padding: 0;
+  margin: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 11.25rem;
+  background-color: #333333;
+  position: fixed;
+  left: -8.75rem;
+}
+
+.sticky-social-bar .social-icon {
+  list-style-type: none;
+  color: #fefefe;
+  background-color: inherit;
+  margin: 0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.25rem 0.25rem 0.5rem;
+}
+
+.sticky-social-bar .social-icon:first-of-type {
+  padding-top: 0.375rem;
+}
+
+.sticky-social-bar .social-icon:last-of-type {
+  padding-bottom: 0.625rem;
+}
+
+.sticky-social-bar .social-icon > a {
+  color: inherit;
+  background-color: inherit;
+}
+
+.sticky-social-bar .social-icon > a > .fa {
+  padding: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+  float: right;
+  margin-left: 0.5rem;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-facebook {
+  background-color: #3b5998;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-twitter {
+  background-color: #55acee;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-linkedin {
+  background-color: #007bb5;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-youtube {
+  background-color: #bb0000;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-instagram {
+  background-color: #125688;
+}
+
+.sticky-social-bar .social-icon > a > .fa.fa-pinterest-p {
+  background-color: #cb2027;
+}
+
+.sticky-social-bar .social-icon > a > .social-icon-text {
+  font-size: 80%;
+  color: #fefefe;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.sticky-social-bar .social-icon:hover {
+  -webkit-transform: translateX(8.75rem);
+      -ms-transform: translateX(8.75rem);
+          transform: translateX(8.75rem);
+}
+
+.sticky-social-bar .social-icon:hover > a {
+  color: inherit;
+  background-color: inherit;
+}
+
+/*SIDE BAR END*/
+/*TIMELINE START*/
+.timeline .timeline-item::after, .timeline .timeline-item::before {
+  clear: both;
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+.timeline {
+  margin: 30px auto;
+  padding: 0 10px;
+  position: relative;
+  transition: all 0.25s ease-in;
+  width: 100%;
+}
+
+.timeline::before {
+  background: #fefefe;
+  content: '';
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 3px;
+}
+
+.timeline::after {
+  clear: both;
+  content: '';
+  display: table;
+  width: 100%;
+}
+
+.timeline a {
+  color: #fefefe;
+  font-weight: bold;
+  transition: all 0.25s ease-in;
+}
+
+.timeline a:hover {
+  box-shadow: 0 1px 0px 0px #fefefe;
+  transition: all 0.25s ease-in;
+}
+
+.timeline .timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline .timeline-item .timeline-icon {
+  background: #fefefe;
+  border-radius: 50%;
+  height: 50px;
+  left: 50%;
+  margin-left: -23px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 50px;
+}
+
+.timeline .timeline-item .timeline-icon img,
+.timeline .timeline-item .timeline-icon svg {
+  left: 14px;
+  position: relative;
+  top: 11px;
+}
+
+.timeline .timeline-item .timeline-icon svg {
+  top: 14px;
+}
+
+.timeline .timeline-item .timeline-content {
+  padding: 20px;
+  text-align: right;
+  transition: all 0.25s ease-in;
+  width: 45%;
+  background: transparent;
+}
+
+.timeline .timeline-item .timeline-content p {
+  color: #fefefe;
+}
+
+.timeline .timeline-item .timeline-content p {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.timeline .timeline-item .timeline-content .timeline-content-date {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.timeline .timeline-item .timeline-content .timeline-content-month {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.timeline .timeline-item .timeline-content.right {
+  float: right;
+  text-align: left;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .timeline {
+    margin: 30px;
+    padding: 0;
+    width: 90%;
+  }
+  .timeline::before {
+    left: 0;
+  }
+  .timeline .timeline-item .timeline-content {
+    float: right;
+    text-align: left;
+    width: 90%;
+  }
+  .timeline .timeline-item .timeline-content::before, .timeline .timeline-item .timeline-content.right::before {
+    border-left: 0;
+    border-right: 7px solid #fefefe;
+    left: 10%;
+    margin-left: -6px;
+  }
+  .timeline .timeline-item .timeline-icon {
+    left: 0;
+  }
+}
+
+/*TIMELINE END*/
+
+
+.ecommerce-product-slider .orbit-previous,
+.ecommerce-product-slider .orbit-next {
+  color: #cacaca;
+}
+
+.ecommerce-product-slider .orbit-bullets button {
+  height: 0.65rem;
+  width: 0.65rem;
+}
+
+.ecommerce-product-slider .product-card {
+  background-color: #fefefe;
+  border: 1px solid #e6e6e6;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ecommerce-product-slider .product-card-thumbnail {
+  display: block;
+  position: relative;
+}
+
+.ecommerce-product-slider .product-card-title {
+  font-family: 'Open sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.45rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.ecommerce-product-slider .product-card-desc {
+  color: #8a8a8a;
+  display: block;
+  font-family: 'Open sans', sans-serif;
+  font-size: 0.85rem;
+}
+
+.ecommerce-product-slider .product-card-price {
+  color: #3e3e3e;
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+
+.ecommerce-product-slider .product-card-sale {
+  color: #cacaca;
+  display: inline-block;
+  font-size: 0.85rem;
+  margin-left: 0.3rem;
+  text-decoration: line-through;
+}
+
+.ecommerce-product-slider .product-card-colors {
+  display: block;
+  margin-top: 0.8rem;
+}
+
+.ecommerce-product-slider .product-card-color-option {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+}
+
